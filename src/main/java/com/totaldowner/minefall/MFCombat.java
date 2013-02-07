@@ -5,8 +5,8 @@ import java.util.Random;
 
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
-import com.github.totaldowner.minefall.living.MFLivingThing;
-import com.github.totaldowner.minefall.living.MFPlayer;
+import com.totaldowner.minefall.living.MFLivingThing;
+import com.totaldowner.minefall.living.MFPlayer;
 
 /**
  * Class that handles the majority of combat situations

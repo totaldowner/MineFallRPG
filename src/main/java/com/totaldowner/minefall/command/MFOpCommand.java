@@ -7,8 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import com.github.totaldowner.minefall.MFItem;
-import com.github.totaldowner.minefall.MineFallRPG;
+import com.totaldowner.minefall.MFItem;
+import com.totaldowner.minefall.MineFallRPG;
 
 public class MFOpCommand implements CommandExecutor {
 
@@ -25,8 +25,7 @@ public class MFOpCommand implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender arg0, Command arg1, String arg2,
-            String[] arg3) {
+    public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
 
         if (arg3.length > 0) {
             if (arg0.getName().compareTo("CONSOLE") == 0) { // Can not be run by

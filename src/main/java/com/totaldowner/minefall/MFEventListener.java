@@ -25,9 +25,9 @@ import org.bukkit.event.world.ChunkLoadEvent;
 import org.bukkit.event.world.ChunkUnloadEvent;
 import org.bukkit.event.world.WorldSaveEvent;
 
-import com.github.totaldowner.minefall.living.MFLivingThing;
-import com.github.totaldowner.minefall.living.MFMob;
-import com.github.totaldowner.minefall.living.MFPlayer;
+import com.totaldowner.minefall.living.MFLivingThing;
+import com.totaldowner.minefall.living.MFMob;
+import com.totaldowner.minefall.living.MFPlayer;
 
 /**
  * Class that handles Events sent from Bukkit

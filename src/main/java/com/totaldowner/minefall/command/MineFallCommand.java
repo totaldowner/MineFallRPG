@@ -11,9 +11,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import com.github.totaldowner.minefall.MFItem;
-import com.github.totaldowner.minefall.MineFallRPG;
-import com.github.totaldowner.minefall.living.MFPlayer;
+import com.totaldowner.minefall.MFItem;
+import com.totaldowner.minefall.MineFallRPG;
+import com.totaldowner.minefall.living.MFPlayer;
 
 /**
  * The class for the /mf , /minefall commands
@@ -36,8 +36,7 @@ public class MineFallCommand implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender arg0, Command arg1, String arg2,
-            String[] arg3) {
+    public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
         DecimalFormat df = new DecimalFormat("#.##");
 
         if (arg3.length > 0) {

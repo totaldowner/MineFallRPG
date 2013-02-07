@@ -25,8 +25,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.github.totaldowner.minefall.living.MFMob;
-import com.github.totaldowner.minefall.living.MFPlayer;
+import com.totaldowner.minefall.living.MFMob;
+import com.totaldowner.minefall.living.MFPlayer;
 
 /**
  * Class that handles saving and loading of metadatas

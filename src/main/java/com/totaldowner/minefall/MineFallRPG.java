@@ -7,9 +7,9 @@ import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.github.totaldowner.minefall.command.DebugCommand;
-import com.github.totaldowner.minefall.command.MFOpCommand;
-import com.github.totaldowner.minefall.command.MineFallCommand;
+import com.totaldowner.minefall.command.DebugCommand;
+import com.totaldowner.minefall.command.MFOpCommand;
+import com.totaldowner.minefall.command.MineFallCommand;
 
 /**
  * Main class of the Mine Quest RPG plugin

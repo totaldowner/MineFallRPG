@@ -13,7 +13,7 @@ globals:
     woodcutting: 1.0
     digging: 1.0
     farming: 1.0
-
+test:
 defaultplayer:
   strength: 100.0
   dexterity: 100.0

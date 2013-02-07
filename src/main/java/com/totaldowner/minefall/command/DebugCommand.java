@@ -4,7 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import com.github.totaldowner.minefall.MineFallRPG;
+import com.totaldowner.minefall.MineFallRPG;
 
 /**
  * Class for the /mqdebug command
@@ -31,8 +31,7 @@ public class DebugCommand implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender arg0, Command arg1, String arg2,
-            String[] arg3) {
+    public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
         if (arg3.length > 0) {
         }
         return false;

@@ -1,6 +1,6 @@
 name: Mine Fall RPG
 main: com.bitbucket.totaldowner.MineFallRPG
-version: 0.0.1
+version: ${version}
 description: Plugin to create a RPG/MMO environment with skills and stats instead of experience/levels
 database: false
 

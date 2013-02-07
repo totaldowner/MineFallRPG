@@ -1,4 +1,4 @@
-package com.github.totaldowner.minefall;
+package com.totaldowner.minefall;
 
 import java.util.List;
 

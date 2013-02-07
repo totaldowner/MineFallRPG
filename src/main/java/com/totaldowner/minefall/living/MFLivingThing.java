@@ -1,4 +1,4 @@
-package com.github.totaldowner.minefall.living;
+package com.totaldowner.minefall.living;
 
 import java.util.List;
 import java.util.Random;

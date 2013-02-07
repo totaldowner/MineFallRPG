@@ -1,4 +1,4 @@
-package com.github.totaldowner.minefall.living;
+package com.totaldowner.minefall.living;
 
 import org.bukkit.entity.Creature;
 import org.bukkit.entity.EntityType;

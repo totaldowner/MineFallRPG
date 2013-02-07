@@ -1,4 +1,4 @@
-package com.github.totaldowner.minefall.command;
+package com.totaldowner.minefall.command;
 
 import java.text.DecimalFormat;
 

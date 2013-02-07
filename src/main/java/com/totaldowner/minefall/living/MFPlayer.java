@@ -1,4 +1,4 @@
-package com.github.totaldowner.minefall.living;
+package com.totaldowner.minefall.living;
 
 import java.util.ArrayList;
 import java.util.List;

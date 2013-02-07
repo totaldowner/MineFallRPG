@@ -1,4 +1,4 @@
-package com.github.totaldowner.minefall.command;
+package com.totaldowner.minefall.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

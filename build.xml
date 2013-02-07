@@ -1,4 +1,4 @@
-<project name="BukkitSamplePlugin" default="dist" basedir=".">
+<project name="MineFallRPG" default="dist" basedir=".">
     <property name="pluginname" value="MineFallRPG"/>
     <property name="bukkit.jar" location="../Bukkit/dist/Bukkit.jar"/>
     <property name="plugins" location="../../plugins/"/>

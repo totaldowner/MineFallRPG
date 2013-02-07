@@ -30,7 +30,6 @@ public class DebugCommand implements CommandExecutor {
         return this.mq;
     }
 
-    @Override
     public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
         if (arg3.length > 0) {
         }

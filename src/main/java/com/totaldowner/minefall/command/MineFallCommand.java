@@ -35,7 +35,6 @@ public class MineFallCommand implements CommandExecutor {
         this.mq = mineFallRPG;
     }
 
-    @Override
     public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
         DecimalFormat df = new DecimalFormat("#.##");
 

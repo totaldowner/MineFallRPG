@@ -24,7 +24,6 @@ public class MFOpCommand implements CommandExecutor {
         this.mq = mineQuestRPG;
     }
 
-    @Override
     public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
 
         if (arg3.length > 0) {

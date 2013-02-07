@@ -26,10 +26,10 @@ public class MineFallRPG extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new MFEventListener(this), this);
 
-        getCommand("mqdebug").setExecutor(new DebugCommand(this));
-        getCommand("minequest").setExecutor(new MineFallCommand(this));
-        getCommand("mq").setExecutor(new MineFallCommand(this));
-        getCommand("mqop").setExecutor(new MFOpCommand(this));
+        getCommand("mfdebug").setExecutor(new DebugCommand(this));
+        getCommand("minefall").setExecutor(new MineFallCommand(this));
+        getCommand("mf").setExecutor(new MineFallCommand(this));
+        getCommand("mfop").setExecutor(new MFOpCommand(this));
 
         // load chunk data for already loaded chunks
         List<World> worlds = this.getServer().getWorlds();

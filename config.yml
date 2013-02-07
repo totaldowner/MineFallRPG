@@ -1,0 +1,767 @@
+globals:
+  skillgainrate:
+    unarmed: 1.0
+    sword: 1.0
+    archery: 1.0
+    pickaxe: 1.0
+    axe: 1.0
+    shovel: 1.0
+    hoe: 1.0
+    heavyarmor: 1.0
+    lightarmor: 1.0
+    mining: 1.0
+    woodcutting: 1.0
+    digging: 1.0
+    farming: 1.0
+
+defaultplayer:
+  strength: 100.0
+  dexterity: 100.0
+  stamina: 100.0
+  intelligence: 100.0
+  wisdom: 100.0
+  unarmeddamage: 1.0
+  skills:
+    unarmed: 50.0
+    sword: 0.0
+    archery: 0.0
+    pickaxe: 0.0
+    axe: 0.0
+    shovel: 0.0
+    hoe: 0.0
+    heavyarmor: 0.0
+    lightarmor: 0.0
+    mining: 0.0
+    woodcutting: 0.0
+    digging: 0.0
+    farming: 0.0
+      
+mobs:
+  bat:
+    name: Bat
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+    
+  blaze:
+    name: Blaze
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+    
+  cavespider:
+    name: Cave Spider
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+    
+  chicken:
+    name: Chicken
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+    
+  cow:
+    name: Cow
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  creeper:
+    name: Creeper
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  enderman:
+    name: Enderman
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  enderdragon:
+    name: Ender Dragon
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  ghast:
+    name: Ghast
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  irongolem:
+    name: Iron Golem
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  magamacube:
+    name: Magma Cube
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  mushroomcow:
+    name: Mushroom Cow
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  ocelot:
+    name: Ocelot
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  pig:
+    name: Pig
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  pigzombie:
+    name: Pig Zombie
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  sheep:
+    name: Sheep
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  silverfish:
+    name: Silverfish
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  skeleton:
+    name: Skeleton
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  slime:
+    name: Slime
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  snowman:
+    name: Snowman
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  spider:
+    name: Spider
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  squid:
+    name: Squid
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  villager:
+    name: Villager
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  witch:
+    name: Witch
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  wither:
+    name: Wither
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  wolf:
+    name: Wolf
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+  
+  zombie:
+    name: Zombie
+    strength: 10.0
+    dexterity: 10.0
+    stamina: 10.0
+    intelligence: 10.0
+    wisdom: 10.0
+    experience: 1
+    combatskill: unarmed
+    damage: 1.0
+    skills:
+      unarmed: 50.0
+      sword: 0.0
+      archery: 0.0
+      pickaxe: 0.0
+      axe: 0.0
+      shovel: 0.0
+      hoe: 0.0
+      heavyarmor: 0.0
+      lightarmor: 0.0
+      mining: 0.0
+      woodcutting: 0
+      digging: 0.0
+      farming: 0.0
+    loot:
+
+items:
+  practicesword:
+    name: Practice Sword
+    look: woodensword
+    damage: 2.0
+    value: 2.0
+  practiceaxe:
+    name: Practice Axe
+    look: woodenaxe
+    damage: 2.0
+    value: 2.0
+  practicepick:
+    name: Practice Pickaxe
+    look: woodenpickaxe
+    damage: 2.0
+    value: 2.0
+  practicehoe:
+    name: Practice Hoe
+    look: woodenhoe
+    damage: 2.0
+    value: 2.0
+  practiceshovel: 
+    name: Practice Shovel
+    look: woodenshovel
+    damage: 2.0
+    value: 2.0

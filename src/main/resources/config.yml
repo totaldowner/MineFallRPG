@@ -1,5 +1,6 @@
 #Global settings
 globals:
+  #Skill gains, these are exponential based on current skill so dont stray to far
   skillgainrate:
     unarmed: 1.0
     sword: 1.0
@@ -62,6 +63,7 @@ mobs:
       woodcutting: 0
       digging: 0.0
       farming: 0.0
+    #loot tables need an itemname with a chance, if you want multiple of one item to have a chance, then put more that one in the list
     loot:
       itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
       itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
@@ -147,8 +149,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
-      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
-      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
+      itemnames: [ rawchicken, practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 1.0, 0.1, 0.1, 0.1, 0.1, 0.1 ]
     
   cow:
     name: Cow
@@ -175,8 +177,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
-      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
-      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
+      itemnames: [ rawbeef, practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 1.0, 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   creeper:
     name: Creeper
@@ -427,8 +429,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
-      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
-      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
+      itemnames: [ rawporkchop, practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 1.0, 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   pigzombie:
     name: Pig Zombie
@@ -455,8 +457,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
-      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
-      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
+      itemnames: [ rottenflesh, practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.5, 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   sheep:
     name: Sheep
@@ -651,8 +653,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
-      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
-      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
+      itemnames: [ rawfish, practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 1.0, 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   villager:
     name: Villager
@@ -791,10 +793,104 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
-      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
-      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
+      itemnames: [ rottenflesh, practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 1.0, 0.1, 0.1, 0.1, 0.1, 0.1 ]
 
 items:
+  #Food
+  apple:
+    name: Apple
+    look: apple
+    
+  bakedpotato:
+    name: Baked Potato
+    look: bakedpotato
+    
+  bread:
+    name: Bread
+    look: bread
+    
+  cake:
+    name: Cake
+    look: cake
+    
+  carrot:
+    name: Carrot
+    look: carrot
+    
+  cookedchicken:
+    name: Cooked Chicken
+    look: cookedchicken
+    
+  cookedfish:
+    name: Cooked Fish
+    look: cookedfish
+    
+  cookedporkchop:
+    name: Cooked Porkchop
+    look: cookedpork
+    
+  cookie:
+    name: Cookie
+    look: cookie
+    
+  goldenapple:
+    name: Golden Apple
+    look: goldenapple
+    
+  goldencarrot:
+    name: Golden Carrot
+    look: goldencarrot
+    
+  melonslice:
+    name: Melon Slice
+    look: melonslice
+    
+  mushroomstew:
+    name: Mushroom Stew
+    look: mushroomstew
+    
+  poisonouspotato:
+    name: Poisonous Potato
+    look: poisonouspotato
+    
+  potato:
+    name: Potato
+    look: potato
+    
+  pumpkinpie:
+    name: Pumpkin Pie
+    look: pumpkinpie
+    
+  rawbeef:
+    name: Raw Beef
+    look: rawbeef
+    
+  rawchicken:
+    name: Raw Chicken
+    look: rawchicken
+    
+  rawfish:
+    name: Raw Fish
+    look: rawfish
+    
+  rawporkchop:
+    name: Raw Porkchop
+    look: rawporkchop
+    
+  rottenflesh:
+    name: Rotten Flesh
+    look: rottenflesh
+    
+  spidereye:
+    name: Spider Eye
+    look: spidereye
+    
+  steak:
+    name: Steak
+    look: steak
+  
+  #Some Practice weapons first
   practicesword:
     name: Practice Sword
     look: woodensword
@@ -824,3 +920,35 @@ items:
     look: woodenshovel
     damage: 2.0
     value: 2.0
+  
+  #Splintered Weapons
+  splinteredsword:
+    name: Splintered Sword
+    look: woodensword
+    damage: 3.0
+    value: 5.0
+    
+  splinteredaxe:
+    name: Splintered Axe
+    look: woodenaxe
+    damage: 3.0
+    value: 5.0
+    
+  splinteredpick:
+    name: Splintered Pickaxe
+    look: woodenpick
+    damage: 3.0
+    value: 5.0
+    
+  splinteredhoe:
+    name: Splintered How
+    look: woodenhoe
+    damage: 3.0
+    value: 5.0
+    
+  splinteredshovel:
+    name: Splintered Shovel
+    look: woodenshovel
+    damage: 3.0
+    value: 5.0
+    

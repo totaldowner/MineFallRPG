@@ -69,7 +69,7 @@ public class MFItem {
                 }
             }
         }
-        return 1.0;
+        return 0.5;
     }
 
     public static double getValue(ItemStack item) {

@@ -1,3 +1,4 @@
+#Global settings
 globals:
   skillgainrate:
     unarmed: 1.0
@@ -13,14 +14,14 @@ globals:
     woodcutting: 1.0
     digging: 1.0
     farming: 1.0
-test:
+#Settings for a starting character    
 defaultplayer:
   strength: 100.0
   dexterity: 100.0
   stamina: 100.0
   intelligence: 100.0
   wisdom: 100.0
-  unarmeddamage: 1.0
+  unarmeddamage: 0.5
   skills:
     unarmed: 50.0
     sword: 0.0

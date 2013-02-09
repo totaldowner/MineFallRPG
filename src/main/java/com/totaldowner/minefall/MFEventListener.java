@@ -137,7 +137,7 @@ public class MFEventListener implements Listener {
     public void onPlayerItemBreak(PlayerItemBreakEvent event) {
         MFPlayer p = new MFPlayer(event.getPlayer(), mq);
         p.changePlayerSkill(null);
-        p.setDamage(0.5);
+        p.setDamage(mq.getConfig().getDouble("globals.defaultplayer.unarmeddamage", 0.5));
     }
 
     @EventHandler

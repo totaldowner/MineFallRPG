@@ -297,42 +297,35 @@ public abstract class MFLivingThing {
         double intelligencegain = 0.0;
         double dexteritygain = 0.0;
         double wisdomgain = 0.0;
-        double gain = 0.0;
+        double gain = this.getPlugin().getConfig().getDouble("globals.skillgainrate." + skill, 1.0);
 
         if (skill.compareTo("unarmed") == 0) {
-            gain = 1.0;
-            strengthgain = 0.1;
-            staminagain = 0.05;
+            strengthgain = gain * 0.1;
+            staminagain = gain * 0.05;
 
         } else if (skill.compareTo("sword") == 0) {
-            gain = 1.0;
-            strengthgain = 0.1;
-            staminagain = 0.05;
+            strengthgain = gain * 0.1;
+            staminagain = gain * 0.05;
 
         } else if (skill.compareTo("archery") == 0) {
-            gain = 1.0;
-            dexteritygain = 0.1;
-            strengthgain = 0.05;
+            dexteritygain = gain * 0.1;
+            strengthgain = gain * 0.05;
 
         } else if (skill.compareTo("axe") == 0) {
-            gain = 1.0;
-            strengthgain = 0.1;
-            staminagain = 0.05;
+            strengthgain = gain * 0.1;
+            staminagain = gain * 0.05;
 
         } else if (skill.compareTo("pickaxe") == 0) {
-            gain = 1.0;
-            strengthgain = 0.1;
-            staminagain = 0.05;
+            strengthgain = gain * 0.1;
+            staminagain = gain * 0.05;
 
         } else if (skill.compareTo("shovel") == 0) {
-            gain = 1.0;
-            strengthgain = 0.1;
-            staminagain = 0.05;
+            strengthgain = gain * 0.1;
+            staminagain = gain * 0.05;
 
         } else if (skill.compareTo("hoe") == 0) {
-            gain = 1.0;
-            strengthgain = 0.1;
-            staminagain = 0.05;
+            strengthgain = gain * 0.1;
+            staminagain = gain * 0.05;
 
         }
 
@@ -340,7 +333,7 @@ public abstract class MFLivingThing {
         Random rand = new Random();
         if (gainAmount <= 1.0)
             gainAmount = 1.0;
-        gainAmount = 1 / Math.pow(gainAmount, 1.5);
+        gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
         this.setSkill(skill, gainAmount * gain + this.getSkill(skill));
 
@@ -348,7 +341,7 @@ public abstract class MFLivingThing {
         gainAmount = this.getStrength();
         if (gainAmount <= 1.0)
             gainAmount = 1.0;
-        gainAmount = 1 / Math.pow(gainAmount, 1.5);
+        gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
         this.setStrength(this.getStrength() + gainAmount * strengthgain);
 
@@ -356,7 +349,7 @@ public abstract class MFLivingThing {
         gainAmount = this.getStamina();
         if (gainAmount <= 1.0)
             gainAmount = 1.0;
-        gainAmount = 1 / Math.pow(gainAmount, 1.5);
+        gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
         this.setStrength(this.getStamina() + gainAmount * staminagain);
 
@@ -364,7 +357,7 @@ public abstract class MFLivingThing {
         gainAmount = this.getDexterity();
         if (gainAmount <= 1.0)
             gainAmount = 1.0;
-        gainAmount = 1 / Math.pow(gainAmount, 1.5);
+        gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
         this.setStrength(this.getDexterity() + gainAmount * dexteritygain);
 
@@ -372,7 +365,7 @@ public abstract class MFLivingThing {
         gainAmount = this.getIntelligence();
         if (gainAmount <= 1.0)
             gainAmount = 1.0;
-        gainAmount = 1 / Math.pow(gainAmount, 1.5);
+        gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
         this.setStrength(this.getIntelligence() + gainAmount * intelligencegain);
 
@@ -380,7 +373,7 @@ public abstract class MFLivingThing {
         gainAmount = this.getWisdom();
         if (gainAmount <= 1.0)
             gainAmount = 1.0;
-        gainAmount = 1 / Math.pow(gainAmount, 1.5);
+        gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
         this.setStrength(this.getWisdom() + gainAmount * wisdomgain);
     }

@@ -10,9 +10,11 @@ import org.bukkit.plugin.Plugin;
 
 public class MFItem {
 
-    public static ItemStack makeFromConfig(String itemName, int amount,
-            Plugin plugin) {
+    public static ItemStack makeFromConfig(String itemName, int amount, Plugin plugin) {
 
+        if (plugin.getConfig().getString("items." + itemName + ".look") == null){
+            return null;
+        }
         if (plugin.getConfig().getString("items." + itemName + ".look").compareTo("") != 0) {
             Material material;
 

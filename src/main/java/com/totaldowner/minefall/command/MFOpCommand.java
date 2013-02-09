@@ -45,11 +45,22 @@ public class MFOpCommand implements CommandExecutor {
                 } else if (arg3.length > 1) {
                     if (arg3[0].compareTo("item") == 0) {
                         String itemName = arg3[1];
-
+                        ItemStack item;
+                           
                         if (arg3.length > 2 && Integer.valueOf(arg3[2]) > 0) {
-                            player.getInventory().setItem(player.getInventory().firstEmpty(), MFItem.makeFromConfig(itemName, Integer.valueOf(arg3[2]), mq));
+                            item = MFItem.makeFromConfig(itemName, Integer.valueOf(arg3[2]), mq);
+                            if(item != null){
+                                player.getInventory().setItem(player.getInventory().firstEmpty(), item);
+                            } else {
+                                player.sendMessage("Invalid item name");
+                            }
                         } else {
-                            player.getInventory().setItem(player.getInventory().firstEmpty(), MFItem.makeFromConfig(itemName, 1, mq));
+                            item = MFItem.makeFromConfig(itemName, 1, mq);
+                            if(item != null){
+                                player.getInventory().setItem(player.getInventory().firstEmpty(), item);
+                            } else {
+                                player.sendMessage("Invalid item name");
+                            }
                         }
                         return true;
                     }

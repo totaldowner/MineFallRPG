@@ -1,6 +1,8 @@
 package com.totaldowner.minefall;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Chunk;
@@ -13,6 +15,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -24,6 +28,7 @@ import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.event.world.ChunkLoadEvent;
 import org.bukkit.event.world.ChunkUnloadEvent;
 import org.bukkit.event.world.WorldSaveEvent;
+import org.bukkit.inventory.ItemStack;
 
 import com.totaldowner.minefall.living.MFLivingThing;
 import com.totaldowner.minefall.living.MFMob;
@@ -70,7 +75,23 @@ public class MFEventListener implements Listener {
             MFPersistence.savePlayer(p, mq);
         }
     }
-
+    
+    @EventHandler
+    public void onEntityDamage(EntityDamageEvent event){
+        
+        if(event.getCause() == DamageCause.STARVATION){ //Starvation hurts differently
+            if(event.getEntity() instanceof Player){
+                MFPlayer player = new MFPlayer((Player) event.getEntity(), mq);
+                
+                if(player.getMaxHealth() != 0 && player.getHealth() / player.getMaxHealth() > 0.5 ){ //take damage till %50
+                    player.setHealth(player.getHealth() - player.getMaxHealth() * 0.5);
+                }
+            }
+            event.setDamage(0);
+        }
+        
+    }
+    
     @EventHandler
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
 
@@ -147,7 +168,28 @@ public class MFEventListener implements Listener {
 
     @EventHandler
     public void onEntityDeath(EntityDeathEvent event) {
-
+        if(event.getEntity() instanceof Creature){
+            event.getDrops().clear();   //clear the current items
+            
+            Random rand = new Random();
+            MFMob mob = new MFMob((Creature) event.getEntity(), mq);
+            List<String> itemNames = mq.getConfig().getStringList("mobs." + mob.getMobType() + ".loot.itemnames");
+            List<Double> itemChances = mq.getConfig().getDoubleList("mobs." + mob.getMobType() + ".loot.itemchances");
+            
+            for(int x = 0; x < itemNames.size() && x < itemChances.size(); x++){
+                String itemName = itemNames.get(x);
+                Double itemChance = itemChances.get(x);
+                ItemStack item;
+                
+                item = MFItem.makeFromConfig(itemName, 1, mq);
+                if(item != null){
+                    if(rand.nextDouble() < itemChance){
+                        event.getDrops().add(item);
+                    }
+                }
+                
+            }
+        }
     }
 
     @EventHandler

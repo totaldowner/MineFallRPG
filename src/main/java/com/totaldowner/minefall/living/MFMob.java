@@ -1,7 +1,11 @@
 package com.totaldowner.minefall.living;
 
+import java.util.List;
+
 import org.bukkit.entity.Creature;
 import org.bukkit.entity.EntityType;
+import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.Plugin;
 
 /**
@@ -31,6 +35,19 @@ public class MFMob extends MFLivingThing {
         return this.creature;
     }
 
+    public void setMobType(String type){
+        this.getEntity().setMetadata("MFMobType", new FixedMetadataValue(this.getPlugin(), type));
+    }
+    
+    public String getMobType(){
+        List<MetadataValue> values = this.getEntity().getMetadata("MFMobType");
+        for (MetadataValue value : values) {
+            if (value.getOwningPlugin().getDescription().getName().equals(this.getPlugin().getDescription().getName())) {
+                return (String) value.value();
+            }
+        }
+        return "";
+    }
     /**
      * Makes the mob have the metadata supplied by the config.yml
      * 
@@ -42,6 +59,7 @@ public class MFMob extends MFLivingThing {
         String mobname = this.getPlugin().getConfig().getString("mobs." + mobtype + ".name");
 
         if (mobname != null) {
+            this.setMobType(mobtype);
             this.setName(mobname);
             this.setStrength(this.getPlugin().getConfig().getDouble("mobs." + mobtype + ".strength"));
             this.setStamina(this.getPlugin().getConfig().getDouble("mobs." + mobtype + ".stamina"));

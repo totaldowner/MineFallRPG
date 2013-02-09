@@ -259,6 +259,7 @@ public class MFPersistence {
                         chunkElement.appendChild(mob);
                         mob.setAttribute("id", e[x].getUniqueId().toString());
                         mob.setAttribute("name", m.getName());
+                        mob.setAttribute("mobtype", m.getMobType());
                         mob.setAttribute("health", String.valueOf(m.getHealth()));
                         mob.setAttribute("strength", String.valueOf(m.getStrength()));
                         mob.setAttribute("stamina", String.valueOf(m.getStamina()));
@@ -365,6 +366,8 @@ public class MFPersistence {
 
                                     if (!eElement.getAttribute("name").isEmpty())
                                         m.setName(eElement.getAttribute("name"));
+                                    if (!eElement.getAttribute("mobtype").isEmpty())
+                                        m.setMobType(eElement.getAttribute("mobtype"));
                                     if (!eElement.getAttribute("health").isEmpty())
                                         m.setHealth(Double.valueOf(eElement.getAttribute("health")));
                                     if (!eElement.getAttribute("strength").isEmpty())

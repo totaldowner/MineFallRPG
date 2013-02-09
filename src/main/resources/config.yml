@@ -62,6 +62,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
     
   blaze:
     name: Blaze
@@ -88,6 +90,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
     
   cavespider:
     name: Cave Spider
@@ -114,6 +118,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
     
   chicken:
     name: Chicken
@@ -140,6 +146,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
     
   cow:
     name: Cow
@@ -166,6 +174,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   creeper:
     name: Creeper
@@ -192,6 +202,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   enderman:
     name: Enderman
@@ -218,6 +230,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   enderdragon:
     name: Ender Dragon
@@ -244,6 +258,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   ghast:
     name: Ghast
@@ -270,6 +286,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   irongolem:
     name: Iron Golem
@@ -296,6 +314,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   magamacube:
     name: Magma Cube
@@ -322,6 +342,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   mushroomcow:
     name: Mushroom Cow
@@ -348,6 +370,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   ocelot:
     name: Ocelot
@@ -374,6 +398,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   pig:
     name: Pig
@@ -400,6 +426,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   pigzombie:
     name: Pig Zombie
@@ -426,6 +454,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   sheep:
     name: Sheep
@@ -452,6 +482,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   silverfish:
     name: Silverfish
@@ -478,6 +510,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   skeleton:
     name: Skeleton
@@ -504,6 +538,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   slime:
     name: Slime
@@ -530,6 +566,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   snowman:
     name: Snowman
@@ -556,6 +594,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   spider:
     name: Spider
@@ -582,6 +622,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   squid:
     name: Squid
@@ -608,6 +650,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   villager:
     name: Villager
@@ -634,6 +678,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   witch:
     name: Witch
@@ -660,6 +706,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   wither:
     name: Wither
@@ -686,6 +734,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   wolf:
     name: Wolf
@@ -712,6 +762,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
   
   zombie:
     name: Zombie
@@ -738,6 +790,8 @@ mobs:
       digging: 0.0
       farming: 0.0
     loot:
+      itemnames: [ practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
+      itemchances: [ 0.1, 0.1, 0.1, 0.1, 0.1 ]
 
 items:
   practicesword:
@@ -745,21 +799,25 @@ items:
     look: woodensword
     damage: 2.0
     value: 2.0
+    
   practiceaxe:
     name: Practice Axe
     look: woodenaxe
     damage: 2.0
     value: 2.0
+    
   practicepick:
     name: Practice Pickaxe
     look: woodenpickaxe
     damage: 2.0
     value: 2.0
+    
   practicehoe:
     name: Practice Hoe
     look: woodenhoe
     damage: 2.0
     value: 2.0
+    
   practiceshovel: 
     name: Practice Shovel
     look: woodenshovel

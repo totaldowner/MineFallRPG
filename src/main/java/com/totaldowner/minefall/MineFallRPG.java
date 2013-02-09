@@ -31,6 +31,10 @@ public class MineFallRPG extends JavaPlugin {
         getCommand("mf").setExecutor(new MineFallCommand(this));
         getCommand("mfop").setExecutor(new MFOpCommand(this));
 
+        // Clear and add recipes
+        this.getServer().clearRecipes();
+        
+        
         // load chunk data for already loaded chunks
         List<World> worlds = this.getServer().getWorlds();
         for (World w : worlds) {

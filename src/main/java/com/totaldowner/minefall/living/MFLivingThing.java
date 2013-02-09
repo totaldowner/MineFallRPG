@@ -300,7 +300,7 @@ public abstract class MFLivingThing {
         double gain = this.getPlugin().getConfig().getDouble("globals.skillgainrate." + skill, 1.0);
 
         if (skill.compareTo("unarmed") == 0) {
-            strengthgain = gain * 0.1;
+            strengthgain = gain * 1;
             staminagain = gain * 0.05;
 
         } else if (skill.compareTo("sword") == 0) {
@@ -351,7 +351,7 @@ public abstract class MFLivingThing {
             gainAmount = 1.0;
         gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
-        this.setStrength(this.getStamina() + gainAmount * staminagain);
+        this.setStamina(this.getStamina() + gainAmount * staminagain);
 
         // Dexterity
         gainAmount = this.getDexterity();
@@ -359,7 +359,7 @@ public abstract class MFLivingThing {
             gainAmount = 1.0;
         gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
-        this.setStrength(this.getDexterity() + gainAmount * dexteritygain);
+        this.setDexterity(this.getDexterity() + gainAmount * dexteritygain);
 
         // Intelligence
         gainAmount = this.getIntelligence();
@@ -367,7 +367,7 @@ public abstract class MFLivingThing {
             gainAmount = 1.0;
         gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
-        this.setStrength(this.getIntelligence() + gainAmount * intelligencegain);
+        this.setIntelligence(this.getIntelligence() + gainAmount * intelligencegain);
 
         // Wisdom
         gainAmount = this.getWisdom();
@@ -375,6 +375,6 @@ public abstract class MFLivingThing {
             gainAmount = 1.0;
         gainAmount = 1 / Math.pow(gainAmount, 1/gain);
         gainAmount = gainAmount * rand.nextFloat() * 2.0;
-        this.setStrength(this.getWisdom() + gainAmount * wisdomgain);
+        this.setWisdom(this.getWisdom() + gainAmount * wisdomgain);
     }
 }

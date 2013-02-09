@@ -154,8 +154,12 @@ public class MFEventListener implements Listener {
         MFPlayer p = new MFPlayer(event.getPlayer(), mq);
 
         // Set the type of melee weapon being used
-        p.changePlayerSkill(event.getPlayer().getInventory().getItem(event.getNewSlot()).getType());
-        p.setDamage(MFItem.getDamage(event.getPlayer().getInventory().getItem(event.getNewSlot())));
+        if(event.getPlayer().getInventory().getItem(event.getNewSlot()) != null){
+            p.changePlayerSkill(event.getPlayer().getInventory().getItem(event.getNewSlot()).getType());
+            p.setDamage(MFItem.getDamage(event.getPlayer().getInventory().getItem(event.getNewSlot())));
+        } else {
+            p.setDamage(mq.getConfig().getDouble("globals.defaultplayer.unarmeddamage", 0.5));
+        }
     }
 
     @EventHandler

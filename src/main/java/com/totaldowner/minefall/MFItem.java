@@ -113,8 +113,8 @@ public class MFItem {
             }
 
             String name = plugin.getConfig().getString("items." + itemName + ".name");
-            double damage = plugin.getConfig().getDouble("items." + itemName + ".damage", 0.0);
-            double value = plugin.getConfig().getDouble("items." + itemName + ".value", 0.0);
+            double damage = plugin.getConfig().getDouble("items." + itemName + ".damage");
+            double value = plugin.getConfig().getDouble("items." + itemName + ".value");
 
             List<String> lore = new ArrayList<String>();
             

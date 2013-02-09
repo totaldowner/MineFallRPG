@@ -50,6 +50,7 @@ public class MFPlayer extends MFLivingThing {
 
         this.setSkill("unarmed", this.getPlugin().getConfig().getDouble("defaultplayer.skills.unarmed"));
         this.setSkill("sword", this.getPlugin().getConfig().getDouble("defaultplayer.skills.sword"));
+        this.setSkill("archery", this.getPlugin().getConfig().getDouble("defaultplayer.skills.archery"));
         this.setSkill("pickaxe", this.getPlugin().getConfig().getDouble("defaultplayer.skills.pickaxe"));
         this.setSkill("axe", this.getPlugin().getConfig().getDouble("defaultplayer.skills.axe"));
         this.setSkill("shovel", this.getPlugin().getConfig().getDouble("defaultplayer.skills.shovel"));

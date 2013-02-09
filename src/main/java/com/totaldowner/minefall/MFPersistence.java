@@ -163,7 +163,7 @@ public class MFPersistence {
             if (!playerNode.getAttribute("sword").isEmpty())
                 mPlayer.setSkill("sword", Double.valueOf(attr.getNamedItem("sword").getTextContent()));
             if (!playerNode.getAttribute("archery").isEmpty())
-                mPlayer.setSkill("archery", Double.valueOf(attr.getNamedItem("sword").getTextContent()));
+                mPlayer.setSkill("archery", Double.valueOf(attr.getNamedItem("archery").getTextContent()));
             if (!playerNode.getAttribute("pickaxe").isEmpty())
                 mPlayer.setSkill("pickaxe", Double.valueOf(attr.getNamedItem("pickaxe").getTextContent()));
             if (!playerNode.getAttribute("axe").isEmpty())

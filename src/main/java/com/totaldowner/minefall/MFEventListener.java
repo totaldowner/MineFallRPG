@@ -85,6 +85,7 @@ public class MFEventListener implements Listener {
                 
                 if(player.getMaxHealth() != 0 && player.getHealth() / player.getMaxHealth() > 0.5 ){ //take damage till %50
                     player.setHealth(player.getHealth() - player.getMaxHealth() * 0.5);
+                    player.updateHealth();
                 }
             }
             event.setDamage(0);

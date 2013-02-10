@@ -796,7 +796,685 @@ mobs:
       itemnames: [ rottenflesh, practicesword, practiceaxe, practicepick, practicehoe, practiceshovel ]
       itemchances: [ 1.0, 0.1, 0.1, 0.1, 0.1, 0.1 ]
 
+#blocks in game, provides what you get when breaking them items stored as i00: for id have a sub item for subid with the main as well
+blocks:
+  #air:
+  i00:
+    s00:
+  
+  #stone:
+  i01:
+    breakitem: [ stone ]
+    breakitemchance: [ 1.0 ]
+    s00:
+  
+  #grassblock:
+  i02:
+    breakitem: [ dirt ]
+    breakitemchance: [ 1.0 ]
+    s00:
+  
+  #dirt:
+  i03:
+    breakitem: [ dirt ]
+    breakitemchance: [ 1.0 ]
+    s00:
+  
+  #cobblestone:
+  i04:
+    breakitem: [ stone ]
+    breakitemchance: [ 1.0 ]
+    s00:
+  
+  #woodenplanks:
+  i05:
+    s00:
+  
+  #saplings:
+  i06:
+    s00:
+  
+  #bedrock:
+  i07:
+    s00:
+  
+  #water:
+  i08:
+    s00:
+  
+  #stationarywater:
+  i09:
+    s00:
+  
+  #lava:
+  i0A:
+    s00:
+  
+  #stationarylava:
+  i0B:
+    s00:
+  
+  #sand:
+  i0C:
+    s00:
+  
+  #gravel:
+  i0D:
+    s00:
+  
+  #goldore:
+  i0E:
+    s00:
+  
+  #ironore:
+  i0F:
+    s00:
+  
+  #coalore:
+  i10:
+    s00:
+  
+  #wood:
+  i11:
+    s00:
+      breakitem: [ oakwood ]
+      breakitemchance: [ 1.0 ]
+  
+  #leaves:
+  i12:
+    s00:
+  
+  #sponge:
+  i13:
+    s00:
+  
+  #glass:
+  i14:
+    s00:
+  
+  #lapisore:
+  i15:
+    s00:
+  
+  #lapisblock:
+  i16:
+    s00:
+  
+  #dispenser:
+  i17:
+    s00:
+  
+  #sandstone:
+  i18:
+    s00:
+  
+  #noteblock:
+  i19:
+    s00:
+  
+  #bed:
+  i1A:
+    s00:
+  
+  #poweredrail:
+  i1B:
+    s00:
+  
+  #detectorrail:
+  i1C:
+    s00:
+  
+  #stickypiston:
+  i1D:
+    s00:
+  
+  #cobweb:
+  i1E:
+    s00:
+  
+  #tallgrass:
+  i1F:
+    s00:
+  
+  #deadbush:
+  i20:
+    s00:
+  
+  #piston:
+  i21:
+    s00:
+  
+  #pistonextension:
+  i22:
+    s00:
+  
+  #wool:
+  i23:
+    s00:
+  
+  #blockmovedbypiston:
+  i24:
+    s00:
+  
+  #dandelion:
+  i25:
+    s00:
+  
+  #rose:
+  i26:
+    s00:
+  
+  #brownmushroom:
+  i27:
+    s00:
+  
+  #redmushroom:
+  i28:
+    s00:
+  
+  #goldblock:
+  i29:
+    s00:
+  
+  #ironblock:
+  i2A:
+    s00:
+  
+  #doubleslabs:
+  i2B:
+    s00:
+  
+  #slabs:
+  i2C:
+    s00:
+  
+  #bricks:
+  i2D:
+    s00:
+  
+  #tnt:
+  i2E:
+    s00:
+  
+  #bookshelf:
+  i2F:
+    s00:
+  
+  #mossstone:
+  i30:
+    s00:
+  
+  #obsidian:
+  i31:
+    s00:
+  
+  #torch:
+  i32:
+    s00:
+  
+  #fire:
+  i33:
+    s00:
+  
+  #monsterspawner:
+  i34:
+    s00:
+  
+  #oakstairs:
+  i35:
+    s00:
+  
+  #chest:
+  i36:
+    s00:
+  
+  #redstonewire:
+  i37:
+    s00:
+  
+  #diamondore:
+  i38:
+    s00:
+  
+  #diamondblock:
+  i39:
+    s00:
+  
+  #craftingtable:
+  i3A:
+    s00:
+  
+  #wheatseeds:
+  i3B:
+    s00:
+  
+  #farmland:
+  i3C:
+    s00:
+  
+  #furnace:
+  i3D:
+    s00:
+  
+  #burningfurnace:
+  i3E:
+    s00:
+  
+  #signpost:
+  i3F:
+    s00:
+  
+  #woodendoor:
+  i40:
+    s00:
+  
+  #ladders:
+  i41:
+    s00:
+  
+  #rails:
+  i42:
+    s00:
+  
+  #cobblestonestairs:
+  i43:
+    s00:
+  
+  #wallsign:
+  i44:
+    s00:
+  
+  #lever:
+  i45:
+    s00:
+  
+  #stonepressureplate:
+  i46:
+    s00:
+  
+  #irondoor:
+  i47:
+    s00:
+  
+  #woodenpressureplate:
+  i48:
+    s00:
+  
+  #redstoneore:
+  i49:
+    s00:
+  
+  #glowingredstoneore:
+  i4A:
+    s00:
+  
+  #redstonetorchinactive:
+  i4B:
+    s00:
+  
+  #redstonetorchactive:
+  i4C:
+    s00:
+  
+  #stonebutton:
+  i4D:
+    s00:
+  
+  #snow:
+  i4E:
+    s00:
+  
+  #ice:
+  i4F:
+    s00:
+  
+  #snowblock:
+  i50:
+    s00:
+  
+  #cactus:
+  i51:
+    s00:
+  
+  #clayblock:
+  i52:
+    s00:
+  
+  #sugarcane:
+  i53:
+    s00:
+  
+  #jukebox:
+  i54:
+    s00:
+  
+  #fence:
+  i55:
+    s00:
+  
+  #pumpkin:
+  i56:
+    s00:
+  
+  #netherack:
+  i57:
+    s00:
+  
+  #soulsand:
+  i58:
+    s00:
+  
+  #glowstone:
+  i59:
+    s00:
+  
+  #netherportal:
+  i5A:
+    s00:
+  
+  #jackolantern:
+  i5B:
+    s00:
+  
+  #cake:
+  i5C:
+    s00:
+  
+  #redstonerepeaterinactive:
+  i5D:
+    s00:
+  
+  #redstonerepeateractive:
+  i5E:
+    s00:
+  
+  #lockedchest:
+  i5F:
+    s00:
+  
+  #trapdoor:
+  i60:
+    s00:
+  
+  #monsteregg:
+  i61:
+    s00:
+  
+  #stonebricks:
+  i62:
+    s00:
+  
+  #hugebrownmushroom:
+  i63:
+    s00:
+  
+  #hugeredmushroom:
+  i64:
+    s00:
+  
+  #ironbars:
+  i65:
+    s00:
+  
+  #glasspane:
+  i66:
+    s00:
+  
+  #melon:
+  i67:
+    s00:
+  
+  #pumpkinstem:
+  i68:
+    s00:
+  
+  #melonstem:
+  i69:
+    s00:
+  
+  #vines:
+  i6A:
+    s00:
+  
+  #fencegate:
+  i6B:
+    s00:
+  
+  #brickstairs:
+  i6C:
+    s00:
+  
+  #stonebrickstairs:
+  i6D:
+    s00:
+  
+  #mycelium:
+  i6E:
+    s00:
+  
+  #lilypad:
+  i6F:
+    s00:
+  
+  #netherbrick:
+  i70:
+    s00:
+  
+  #netherbrickfence:
+  i71:
+    s00:
+  
+  #netherbrickstairs:
+  i72:
+    s00:
+  
+  #netherwart:
+  i73:
+    s00:
+  
+  #enchantmenttable:
+  i74:
+    s00:
+  
+  #brewingstand:
+  i75:
+    s00:
+  
+  #cauldron:
+  i76:
+    s00:
+  
+  #endportal:
+  i77:
+    s00:
+  
+  #endportalframe:
+  i78:
+    s00:
+  
+  #endstone:
+  i79:
+    s00:
+  
+  #dragonegg:
+  i7A:
+    s00:
+  
+  #redstonelampinactive:
+  i7B:
+    s00:
+  
+  #redstonelampactive:
+  i7C:
+    s00:
+  
+  #doublewoodenslab:
+  i7D:
+    s00:
+  
+  #woodenslab:
+  i7E:
+    s00:
+  
+  #cocoapod:
+  i7F:
+    s00:
+  
+  #sandstonestairs:
+  i80:
+    s00:
+  
+  #emeraldore:
+  i81:
+    s00:
+  
+  #enderchest:
+  i82:
+    s00:
+  
+  #tripwirehook:
+  i83:
+    s00:
+  
+  #tripwire:
+  i84:
+    s00:
+  
+  #emeraldblock:
+  i85:
+    s00:
+  
+  #sprucewoodstairs:
+  i86:
+    s00:
+  
+  #birchwoodstairs:
+  i87:
+    s00:
+  
+  #junglewoodstairs:
+  i88:
+    s00:
+  
+  #commandblock:
+  i89:
+    s00:
+  
+  #beacon:
+  i8A:
+    s00:
+  
+  #cobblestonewall:
+  i8B:
+    s00:
+  
+  #flowerpot:
+  i8C:
+    s00:
+  
+  #carrots:
+  i8D:
+    s00:
+  
+  #potatoes:
+  i8E:
+    s00:
+  
+  #woodenbutton:
+  i8F:
+    s00:
+  
+  #mobheads:
+  i90:
+    s00:
+  
+  #anvil:
+  i91:
+    s00:
+  
+  #trappedchest:
+  i92:
+    s00:
+  
+  #weightedpressureplatelight:
+  i93:
+    s00:
+  
+  #weightedpressureplateheavy:
+  i94:
+    s00:
+  
+  #redstonecomparatorinactive:
+  i95:
+    s00:
+  
+  #redstonecomparatoractive:
+  i96:
+    s00:
+  
+  #daylightsensor:
+  i97:
+    s00:
+  
+  #redstoneblock:
+  i98:
+    s00:
+  
+  #netherquartzore:
+  i99:
+    s00:
+  
+  #hopper:
+  i9A:
+    s00:
+  
+  #quartzblock:
+  i9B:
+    s00:
+  
+  #quartzstairs:
+  i9C:
+    s00:
+  
+  #activatorrail:
+  i9D:
+    s00:
+  
+  #dropper:
+  i9E:
+    s00:
+
 items:
+  #Blocks
+  dirt:
+    name: Dirt
+    look: dirt
+    
+  stone:
+    name: Stone
+    look: stone
+    
+  oakwood:
+    name: Wood
+    look: oakwood
+    
+  sprucewood:
+    name: Wood
+    look: sprucewood
+    
+  birchwood:
+    name: Wood
+    look: birchwood
+    
+  junglewood:
+    name: Wood
+    look: junglewood
+  
+  #Crafting
+  furnace:
+    name: Furnace item
+    look: furnace
+    
   #Food
   apple:
     name: Apple

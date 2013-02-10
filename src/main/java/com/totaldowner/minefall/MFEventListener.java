@@ -6,13 +6,16 @@ import java.util.Random;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Chunk;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Creature;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -131,6 +134,42 @@ public class MFEventListener implements Listener {
             event.setDamage(0);
         }
 
+    }
+    
+    //Set to highest so it can let world guard style plugins prevent breakage
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onBlockBreak(BlockBreakEvent event){
+        
+        //if it wasnt cancelled already by something else
+        if(!event.isCancelled()){
+            
+            int itemid = event.getBlock().getTypeId();
+            int itemsubid = event.getBlock().getData();
+
+            Random rand = new Random();
+            List<String> itemNames = mq.getConfig().getStringList("blocks.i" + String.format("%02X", itemid) + ".breakitem");
+            List<Double> itemChances = mq.getConfig().getDoubleList("blocks.i" + String.format("%02X", itemid) + ".breakitemchance");
+            
+            itemNames.addAll(mq.getConfig().getStringList("blocks.i" + String.format("%02X", itemid) + ".s" + String.format("%02X", itemsubid) + ".breakitem"));
+            itemChances.addAll(mq.getConfig().getDoubleList("blocks.i" + String.format("%02X", itemid) + ".s" + String.format("%02X", itemsubid) + ".breakitemchance"));
+
+            for(int x = 0; x < itemNames.size() && x < itemChances.size(); x++){
+                String itemName = itemNames.get(x);
+                Double itemChance = itemChances.get(x);
+                ItemStack item;
+                
+                item = MFItem.makeFromConfig(itemName, 1, mq);
+                if(item != null){
+                    if(rand.nextDouble() < itemChance){
+                        event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), item);
+                    }
+                }
+                
+            }
+
+            event.setCancelled(true);
+            event.getBlock().setType(Material.AIR);
+        }
     }
 
     @EventHandler

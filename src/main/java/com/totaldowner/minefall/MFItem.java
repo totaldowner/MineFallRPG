@@ -6,14 +6,13 @@ import java.util.List;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.material.MaterialData;
 import org.bukkit.plugin.Plugin;
 
 public class MFItem {
 
     public static ItemStack makeFromConfig(String itemName, int amount, Plugin plugin) {
 
-        
-        
         if(plugin.getConfig().getString("items." + itemName + ".look") == null){
             return null;
         
@@ -22,6 +21,8 @@ public class MFItem {
 
             // find out what its made of
             String mat = plugin.getConfig().getString("items." + itemName + ".look");
+            byte subid = 0;
+            
             //WEAPONS
             if (mat.compareTo("woodensword") == 0) {
                 material = Material.WOOD_SWORD;
@@ -108,6 +109,33 @@ public class MFItem {
             } else if (mat.compareTo("steak") == 0) {
                 material = Material.COOKED_BEEF;
                 
+            //CRAFTING
+            } else if (mat.compareTo("furnace") == 0) {
+                material = Material.FURNACE;
+                
+            //BLOCKS
+            } else if (mat.compareTo("dirt") == 0) {
+                material = Material.DIRT;
+                
+            } else if (mat.compareTo("stone") == 0) {
+                material = Material.STONE;
+                
+            } else if (mat.compareTo("oakwood") == 0) {
+                material = Material.LOG;
+                subid = 0;
+                
+            } else if (mat.compareTo("sprucewood") == 0) {
+                material = Material.LOG;
+                subid = 1;
+                
+            } else if (mat.compareTo("birchwood") == 0) {
+                material = Material.LOG;
+                subid = 2;
+                
+            } else if (mat.compareTo("junglewood") == 0) {
+                material = Material.LOG;
+                subid = 3;
+                
             } else {
                 return null;
             }
@@ -125,6 +153,7 @@ public class MFItem {
             lore.add("value:" + String.valueOf(value));
 
             ItemStack item = new ItemStack(material, amount);
+            item.setData(new MaterialData(material, subid)); //set subtype
             ItemMeta iMeta = item.getItemMeta();
             iMeta.setDisplayName(name);
             iMeta.setLore(lore);

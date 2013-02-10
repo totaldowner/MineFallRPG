@@ -1,6 +1,5 @@
 package com.totaldowner.minefall;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -21,6 +20,7 @@ import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.entity.EntityDeathEvent;
+import org.bukkit.event.entity.ItemSpawnEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemBreakEvent;
@@ -149,26 +149,60 @@ public class MFEventListener implements Listener {
             Random rand = new Random();
             List<String> itemNames = mq.getConfig().getStringList("blocks.i" + String.format("%02X", itemid) + ".breakitem");
             List<Double> itemChances = mq.getConfig().getDoubleList("blocks.i" + String.format("%02X", itemid) + ".breakitemchance");
+            List<String> itemSkills = mq.getConfig().getStringList("blocks.i" + String.format("%02X", itemid) + ".breakitemskill");
+            
+            //pad the skills
+            while(itemSkills.size() < itemNames.size()) {
+                itemSkills.add("");
+            }
             
             itemNames.addAll(mq.getConfig().getStringList("blocks.i" + String.format("%02X", itemid) + ".s" + String.format("%02X", itemsubid) + ".breakitem"));
             itemChances.addAll(mq.getConfig().getDoubleList("blocks.i" + String.format("%02X", itemid) + ".s" + String.format("%02X", itemsubid) + ".breakitemchance"));
 
+            //pad the skills
+            while(itemSkills.size() < itemNames.size()) {
+                itemSkills.add("");
+            }
+            
+            MFPlayer player = new MFPlayer(event.getPlayer(), mq);
             for(int x = 0; x < itemNames.size() && x < itemChances.size(); x++){
                 String itemName = itemNames.get(x);
                 Double itemChance = itemChances.get(x);
+                String itemSkill = itemSkills.get(x);
                 ItemStack item;
-                
+                double skill = player.getSkill(itemSkill);
+                        
                 item = MFItem.makeFromConfig(itemName, 1, mq);
-                if(item != null){
-                    if(rand.nextDouble() < itemChance){
-                        event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), item);
+
+                //use a skill if it has one attached
+                if(itemSkill.compareTo("") != 0){
+                    if(item != null){
+                        if(rand.nextDouble() < (itemChance * skill)){
+                            event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), item);
+                            player.gainSkill(itemSkill);
+                        }
+                    }
+                } else {
+                    if(item != null){
+                        if(rand.nextDouble() < itemChance){
+                            event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), item);
+                           
+                        }
                     }
                 }
                 
             }
 
+        }
+    }
+    
+    @EventHandler
+    public void onItemSpawn(ItemSpawnEvent event){
+        
+        //Prevent normal items from being spawned, fix when setDrops() works correctly for blocks
+        if(event.getEntity().getItemStack().getItemMeta() == null || !event.getEntity().getItemStack().getItemMeta().hasDisplayName()){
+            //not one of my items so kill it, all items we spawn have a displayname
             event.setCancelled(true);
-            event.getBlock().setType(Material.AIR);
         }
     }
 
@@ -178,7 +212,7 @@ public class MFEventListener implements Listener {
         p.changePlayerSkill(null);
         p.setDamage(mq.getConfig().getDouble("globals.defaultplayer.unarmeddamage", 0.5));
     }
-
+    
     @EventHandler
     public void onInventoryClose(InventoryCloseEvent event) {
         MFPlayer p = new MFPlayer((Player) event.getPlayer(), mq);

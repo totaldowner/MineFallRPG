@@ -806,6 +806,7 @@ blocks:
   i01:
     breakitem: [ stone ]
     breakitemchance: [ 1.0 ]
+    breakitemskill: [ mining ]
     s00:
   
   #grassblock:
@@ -824,11 +825,23 @@ blocks:
   i04:
     breakitem: [ stone ]
     breakitemchance: [ 1.0 ]
+    breakitemskill: [ mining ]
     s00:
   
   #woodenplanks:
   i05:
     s00:
+      breakitem: [ oakplank ]
+      breakitemchance: [ 1.0 ]
+    s01:
+      breakitem: [ spruceplank ]
+      breakitemchance: [ 1.0 ]
+    s02:
+      breakitem: [ birchplank ]
+      breakitemchance: [ 1.0 ]
+    s03:
+      breakitem: [ jungleplank ]
+      breakitemchance: [ 1.0 ]
   
   #saplings:
   i06:
@@ -856,28 +869,50 @@ blocks:
   
   #sand:
   i0C:
+    breakitem: [ sand ]
+    breakitemchance: [ 20.0 ]
     s00:
   
   #gravel:
   i0D:
+    breakitem: [ gravel ]
+    breakitemchance: [ 20.0 ]
     s00:
   
   #goldore:
   i0E:
+    breakitem: [ goldore ]
+    breakitemchance: [ 5.0 ]
+    breakitemskill: [ mining ]
     s00:
   
   #ironore:
   i0F:
+    breakitem: [ ironore ]
+    breakitemchance: [ 5.0 ]
+    breakitemskill: [ mining ]
     s00:
   
   #coalore:
   i10:
+    breakitem: [ coal ]
+    breakitemchance: [ 5.0 ]
+    breakitemskill: [ mining ]
     s00:
   
   #wood:
   i11:
     s00:
       breakitem: [ oakwood ]
+      breakitemchance: [ 1.0 ]
+    s01:
+      breakitem: [ sprucewood ]
+      breakitemchance: [ 1.0 ]
+    s02:
+      breakitem: [ birchwood ]
+      breakitemchance: [ 1.0 ]
+    s03:
+      breakitem: [ junglewood ]
       breakitemchance: [ 1.0 ]
   
   #leaves:
@@ -894,6 +929,9 @@ blocks:
   
   #lapisore:
   i15:
+    breakitem: [ lapislazuliore ]
+    breakitemchance: [ 5.0 ]
+    breakitemskill: [ mining ]
     s00:
   
   #lapisblock:
@@ -906,6 +944,8 @@ blocks:
   
   #sandstone:
   i18:
+    breakitem: [ sand ]
+    breakitemchance: [ 1.0 ]
     s00:
   
   #noteblock:
@@ -1455,25 +1495,126 @@ items:
     look: stone
     
   oakwood:
-    name: Wood
+    name: Oak Wood
     look: oakwood
     
   sprucewood:
-    name: Wood
+    name: Spruce Wood
     look: sprucewood
     
   birchwood:
-    name: Wood
+    name: Birch Wood
     look: birchwood
     
   junglewood:
-    name: Wood
+    name: Jungle Wood
     look: junglewood
+    
+  oakplank:
+    name: Oak Plank
+    look: oakplank
+    
+  spruceplank:
+    name: Spruce Plank
+    look: spruceplank
+    
+  birchplank:
+    name: Birch Plank
+    look: birchplank
+    
+  jungleplank:
+    name: Jungle Plank
+    look: jungleplank
+    
+  sand:
+    name: Sand
+    look: sand
+    
+  gravel:
+    name: Gravel
+    look: gravel
+    
+  goldore:
+    name: Gold Ore
+    look: goldore
+    
+  ironore:
+    name: Iron Ore
+    look: ironore
+    
+  coal:
+    name: Coal
+    look: coal
+    
+  lapislazuliore:
+    name: Lapis Lazuli Ore
+    look: lapislazuliore
+    
+  #wools
   
-  #Crafting
-  furnace:
-    name: Furnace item
-    look: furnace
+  whitewool:
+    name: White Wool
+    look: whitewool
+    
+  orangewool:
+    name: Orange Wool
+    look: orangewool
+    
+  magentawool:
+    name: Magenta Wool
+    look: magentawool
+    
+  lightbluewool:
+    name: Light Blue Wool
+    look: lightbluewool
+    
+  yellowwool:
+    name: Yellow Wool
+    look: yellowwool
+    
+  limewool:
+    name: Lime Wool
+    look: limewool
+    
+  pinkwool:
+    name: Pink Wool
+    look: pinkwool
+    
+  graywool:
+    name: Gray Wool
+    look: graywool
+    
+  lightgraywool:
+    name: Light Gray Wool
+    look: lightgraywool
+    
+  cyanwool:
+    name: Cyan Wool
+    look: cyanwool
+    
+  purplewool:
+    name: Purple Wool
+    look: purplewool
+    
+  bluewool:
+    name: Blue Wool
+    look: bluewool
+    
+  brownwool:
+    name: Brown Wool
+    look: brownwool
+    
+  greenwool:
+    name: Green Wool
+    look: greenwool
+    
+  redwool:
+    name: Red Wool
+    look: redwool
+    
+  blackwool:
+    name: Black Wool
+    look: blackwool
     
   #Food
   apple:

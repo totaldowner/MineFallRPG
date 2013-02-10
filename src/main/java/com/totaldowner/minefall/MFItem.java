@@ -3,6 +3,7 @@ package com.totaldowner.minefall;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -109,10 +110,6 @@ public class MFItem {
             } else if (mat.compareTo("steak") == 0) {
                 material = Material.COOKED_BEEF;
                 
-            //CRAFTING
-            } else if (mat.compareTo("furnace") == 0) {
-                material = Material.FURNACE;
-                
             //BLOCKS
             } else if (mat.compareTo("dirt") == 0) {
                 material = Material.DIRT;
@@ -136,6 +133,104 @@ public class MFItem {
                 material = Material.LOG;
                 subid = 3;
                 
+            } else if (mat.compareTo("oakplank") == 0) {
+                material = Material.WOOD;
+                subid = 0;
+                
+            } else if (mat.compareTo("spruceplank") == 0) {
+                material = Material.WOOD;
+                subid = 1;
+                
+            } else if (mat.compareTo("birchplank") == 0) {
+                material = Material.WOOD;
+                subid = 2;
+                
+            } else if (mat.compareTo("jungleplank") == 0) {
+                material = Material.WOOD;
+                subid = 3;
+                
+            } else if (mat.compareTo("sand") == 0) {
+                material = Material.SAND;
+                
+            } else if (mat.compareTo("gravel") == 0) {
+                material = Material.GRAVEL;
+                
+            } else if (mat.compareTo("goldore") == 0) {
+                material = Material.GOLD_ORE;
+                
+            } else if (mat.compareTo("ironore") == 0) {
+                material = Material.IRON_ORE;
+                
+            } else if (mat.compareTo("coal") == 0) {
+                material = Material.COAL;
+                
+            } else if (mat.compareTo("lapislazuliore") == 0) {
+                material = Material.LAPIS_ORE;
+                
+            } else if (mat.compareTo("whitewool") == 0) {
+                material = Material.WOOL;
+                subid = DyeColor.WHITE.getData();
+                
+            } else if (mat.compareTo("orangewool") == 0) {
+                material = Material.WOOL;
+                subid = DyeColor.ORANGE.getData();
+                
+            } else if (mat.compareTo("magentawool") == 0) {
+                material = Material.WOOL;
+                subid = DyeColor.MAGENTA.getData();
+                
+            } else if (mat.compareTo("lightbluewool") == 0) {
+                material = Material.WOOL;
+                subid = DyeColor.LIGHT_BLUE.getData();
+                
+            } else if (mat.compareTo("yellowwool") == 0) {
+                material = Material.WOOL;
+                subid = DyeColor.YELLOW.getData();
+                
+            } else if (mat.compareTo("limewool") == 0) {
+                material = Material.WOOL;
+                subid = 5;
+                
+            } else if (mat.compareTo("pinkwool") == 0) {
+                material = Material.WOOL;
+                subid = 6;
+                
+            } else if (mat.compareTo("graywool") == 0) {
+                material = Material.WOOL;
+                subid = 7;
+                
+            } else if (mat.compareTo("lightgraywool") == 0) {
+                material = Material.WOOL;
+                subid = 8;
+                
+            } else if (mat.compareTo("cyanwool") == 0) {
+                material = Material.WOOL;
+                subid = 9;
+                
+            } else if (mat.compareTo("purplewool") == 0) {
+                material = Material.WOOL;
+                subid = 10;
+                
+            } else if (mat.compareTo("bluewool") == 0) {
+                material = Material.WOOL;
+                subid = 11;
+                
+            } else if (mat.compareTo("brownwool") == 0) {
+                material = Material.WOOL;
+                subid = 12;
+                
+            } else if (mat.compareTo("greenwool") == 0) {
+                material = Material.WOOL;
+                subid = 13;
+                
+            } else if (mat.compareTo("redwool") == 0) {
+                material = Material.WOOL;
+                subid = 14;
+                
+            } else if (mat.compareTo("blackwool") == 0) {
+                material = Material.WOOL;
+                subid = 15;
+                
             } else {
                 return null;
             }
@@ -151,9 +246,12 @@ public class MFItem {
                 lore.add("damage:" + String.valueOf(damage));
             
             lore.add("value:" + String.valueOf(value));
-
-            ItemStack item = new ItemStack(material, amount);
-            item.setData(new MaterialData(material, subid)); //set subtype
+            ItemStack item;
+            if(subid > 0){
+                item = new ItemStack(material, amount, subid);
+            } else {
+                item = new ItemStack(material, amount);
+            }
             ItemMeta iMeta = item.getItemMeta();
             iMeta.setDisplayName(name);
             iMeta.setLore(lore);
